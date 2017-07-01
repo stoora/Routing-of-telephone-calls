@@ -1,33 +1,35 @@
 var expect = require('chai').expect;
-var rooting_calls = require('./main.js');
-
-var phone = require('./Clean_number');
+var assert = require('chai').assert;
+var Dialed_number = require('./main.js').Dialed_number;
+var pl = require('./main.js').price_list;
 
 describe('rooting-of-telephone-calls', function(){
    
-    describe('Telephone numbers should be inputted in the same format as in price lists (strings in my case)', function(){
+    describe('Telephone numbers should be inputted in the same format as in price lists', function(){
         
         it("the dialed number should be a string",()=>{
             
-            expect(phone.Clean_number('4673212345')).to.be.a('string');
-                
+            assert.isString(Dialed_number);
+            
         });
         
-        it("price lists should be filled as strings too",()=>{
+        it("price list should be filled with string",()=>{
             
-            expect(rooting_calls.OperatorA_price_list).to.be.an('array');
+            expect(pl).to.satisfy(isArrayOfStrings);
+            
+            function isArrayOfStrings(array){
+                
+                return array.every((item)=>{
+                    
+                    return typeof item === 'string';
+                    
+                });
+                
+            }
                 
         });
         
     });
-
+ 
 });
     
-
-
-/*it('should work!', function(){
-        
-        expect(true).to.be.true;
-        
-    });
-    */
