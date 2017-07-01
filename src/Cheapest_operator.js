@@ -6,14 +6,14 @@ module.exports = {
         var cheapest = 0 ;
         
         for(var i in couples){
-            var price = couples[i].price;
+            var price = Number(couples[i].price);
             prices.push(price);
         }
+        
         cheapest = Math.min.apply(null, prices);
         
         for(var o in couples){
-            if(couples[o].price === cheapest){
-                
+            if(Number(couples[o].price) === cheapest){
                 operator_name = couples[o].operator ;  
                 break;
             }

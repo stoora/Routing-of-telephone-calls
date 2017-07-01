@@ -37,6 +37,5 @@ for (var i=0; i <= All_operators.length - 1; i++) {
 }
 
 if(rooting_to.cheapest){
-    
         console.log(rooting_to.operator_name + " is the cheapest : " + rooting_to.cheapest + "$ . ");
 }
