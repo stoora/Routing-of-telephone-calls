@@ -1,4 +1,3 @@
-var clean = require("./Clean_number.js")        ;
 var matching = require("./Matching_prefixes.js");
 var longest = require("./Get_longest_prefix.js");
 var cheapest = require("./Cheapest_operator.js");
@@ -25,8 +24,6 @@ var All_operators = [];
 
 All_operators.push(OperatorA_price_list);
 All_operators.push(OperatorB_price_list);
-
-clean.Clean_number(challenge_Number); // cleaning dialed number from '+' and '-' 
 
 for (var i=0; i <= All_operators.length - 1; i++) {
     
