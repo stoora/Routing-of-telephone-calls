@@ -1,4 +1,4 @@
-// this function adds a new tele operator
+// this function submits a new tele operator price list
 module.exports{
     var tele_operator;
     var tele_operators = [];
