@@ -27,8 +27,9 @@ All_operators.push(OperatorB_price_list);
 
 for (var i=0; i <= All_operators.length - 1; i++) {
     
-    var prefixes_found = matching.Matching_prefixes(challenge_Number, All_operators[i]);
+     prefixes_found = matching.Matching_prefixes(challenge_Number, All_operators[i]);
     if(prefixes_found !== null && prefixes_found.length > 1) {
+        nothing_found = false;
         couple = longest.Get_longest_prefix(prefixes_found);
         couples.push(couple)    ;
         console.log(couples);
@@ -58,4 +59,6 @@ exports.Dialed_number = challenge_Number ;
 exports.price_list = pl ;
 exports.any_price_list = OperatorA_price_list ;
 exports.All_operators = All_operators ;
+exports.nothing_found = nothing_found ;
+exports.prefixes_found = prefixes_found ;
 exports.nothing_found = nothing_found ;

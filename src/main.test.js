@@ -6,8 +6,10 @@ var pl = require('./main.js').price_list;
 var any_price_list = require('./main.js').any_price_list;
 var All_ops = require('./main.js').All_operators;
 var nothing_found = require('./main.js').nothing_found;
+var prefixes_found = require('./main.js').prefixes_found;
+var nothing_found = require('./main.js').nothing_found;
 
-describe('rooting-of-telephone-calls', function(){
+describe('rooting-of-telephone-calls - main.js', function(){
    
     describe('Telephone numbers should be inputted in the same format as in price lists', function(){
         
@@ -17,7 +19,7 @@ describe('rooting-of-telephone-calls', function(){
             
         });
         
-        it("price list should be filled with string",()=>{
+        it("price list should be filled with strings",()=>{
             
             expect(pl).to.satisfy(isArrayOfStrings);
             
@@ -45,12 +47,38 @@ describe('rooting-of-telephone-calls', function(){
             
         });
         
-        it('initially there is no prefixes found for a given number', ()=>{
-            
-            assert.isTrue(nothing_found, "should be true");
-            
-        });
+        
     });
  
 });
     
+describe('rooting-of-telephone-calls - Matching_prefixes.js ', ()=>{
+    describe('function must return an array [] that has ', ()=>{
+        
+        it("even if there is no prefixes_found the function must return the 'operator's name' and the 'phone number' ",()=>{
+            
+            expect(prefixes_found).to.have.property('operator');
+            expect(prefixes_found).to.have.property('phoneNumber');
+            
+        });
+        
+        it('if no prefixes found the array should be empty', ()=>{
+            
+            if(nothing_found){
+                
+                expect(prefixes_found).to.be.null;                 
+            
+            } 
+            
+        });
+    
+        it('if prefixes are found the array should not be empty', ()=>{
+        
+            if(!nothing_found){
+                
+                expect(prefixes_found).to.have.lengthOf.above(0);                 
+            }    
+        });
+        
+    });
+});

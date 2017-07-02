@@ -29,8 +29,8 @@ module.exports = {
         if(matched_prefixes.length){
             
         return matched_prefixes ; 
-        }
-        else{
+        
+        }else{
                 console.log("Sorry you cannot dial this number with : " + operator );
             return null;
         }      
