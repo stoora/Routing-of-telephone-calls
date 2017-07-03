@@ -62,3 +62,5 @@ exports.All_operators = All_operators ;
 exports.nothing_found = nothing_found ;
 exports.prefixes_found = prefixes_found ;
 exports.nothing_found = nothing_found ;
+exports.couple = couple ;
+exports.couples = couples ;

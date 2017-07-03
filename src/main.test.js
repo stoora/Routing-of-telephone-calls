@@ -8,6 +8,8 @@ var All_ops = require('./main.js').All_operators;
 var nothing_found = require('./main.js').nothing_found;
 var prefixes_found = require('./main.js').prefixes_found;
 var nothing_found = require('./main.js').nothing_found;
+var couple = require('./main.js').couple;
+var couples = require('./main.js').couples;
 
 describe('rooting-of-telephone-calls - main.js', function(){
    
@@ -62,7 +64,7 @@ describe('rooting-of-telephone-calls - Matching_prefixes.js ', ()=>{
             
         });
         
-        it('if no prefixes found the array should be empty', ()=>{
+        it('if no prefixes found the array prefixes_found [] should be empty', ()=>{
             
             if(nothing_found){
                 
@@ -72,13 +74,67 @@ describe('rooting-of-telephone-calls - Matching_prefixes.js ', ()=>{
             
         });
     
-        it('if prefixes are found the array should not be empty', ()=>{
+        it('if prefixes are found the array prefixes_found [] should not be empty', ()=>{
         
             if(!nothing_found){
                 
                 expect(prefixes_found).to.have.lengthOf.above(0);                 
             }    
         });
+    });
+});
+
+describe('rooting-of-telephone-calls - Get_longest_prefix.js ', ()=>{
+    describe('function must return a couple {} ', ()=>{
+        
+        it("couple object has 3 properties 'operator, prefix, price'",()=>{
+            
+            expect(couple).to.have.keys('operator', 'prefix', 'price');
+            
+        });
+        
+        it('if no prefixes found the array couples [] should be empty', ()=>{
+            
+            if(nothing_found){
+                
+                expect(couples).to.be.null;                 
+            
+            } 
+            
+        });
+    
+        it('if prefixes are found the array couples [] should not be empty', ()=>{
+        
+            if(!nothing_found){
+                
+                expect(couples).to.have.lengthOf.above(0);                 
+            }    
+        });
+        
+        
+    });
+});
+
+describe('rooting-of-telephone-calls - Cheapest_operator.js ', ()=>{
+    describe('function must return an object {} (rooting_to) ', ()=>{
+        
+        it("'rooting_to' object has must have 2 properties 'cheapest, 'operator_name'", ()=>{
+            
+            if(nothing_found){
+                
+                expect(couples).to.be.null;                 
+
+            }
+        });
+    
+        it('if prefixes are found the array couples [] should not be empty', ()=>{
+        
+            if(!nothing_found){
+                
+                expect(couples).to.have.lengthOf.above(0);                 
+            }    
+        });
+        
         
     });
 });
