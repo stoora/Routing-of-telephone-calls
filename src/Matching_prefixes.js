@@ -25,13 +25,13 @@ module.exports = {
                 
             }
         }
-//                console.log(matched_prefixes);
+        //                console.log(matched_prefixes);
         if(matched_prefixes.length){
             
-        return matched_prefixes ; 
-        
+            return matched_prefixes ; 
+            
         }else{
-                console.log("Sorry you cannot dial this number with : " + operator );
+            console.log("Sorry you cannot dial this number with : " + operator );
             return null;
         }      
     }

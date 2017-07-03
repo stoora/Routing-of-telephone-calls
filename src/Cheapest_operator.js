@@ -17,7 +17,6 @@ module.exports = {
                 operator_name = couples[o].operator ;  
                 break;
             }
-            
         }
         
         return {cheapest, operator_name};    

@@ -11,8 +11,8 @@ var nothing_found = require('./main.js').nothing_found;
 var couple = require('./main.js').couple;
 var couples = require('./main.js').couples;
 
-describe('rooting-of-telephone-calls - main.js', function(){
-   
+describe('rooting-of-telephone-calls - main.js    Hi :D :D :D', function(){
+    
     describe('Telephone numbers should be inputted in the same format as in price lists', function(){
         
         it("the dialed number should be a string",()=>{
@@ -34,7 +34,7 @@ describe('rooting-of-telephone-calls - main.js', function(){
                 });
                 
             }
-                
+            
         });
         
         it("each price_list should have its operator name", ()=>{
@@ -51,9 +51,9 @@ describe('rooting-of-telephone-calls - main.js', function(){
         
         
     });
- 
-});
     
+});
+
 describe('rooting-of-telephone-calls - Matching_prefixes.js ', ()=>{
     describe('function must return an array [] that has ', ()=>{
         
@@ -69,13 +69,13 @@ describe('rooting-of-telephone-calls - Matching_prefixes.js ', ()=>{
             if(nothing_found){
                 
                 expect(prefixes_found).to.be.null;                 
-            
+                
             } 
             
         });
-    
-        it('if prefixes are found the array prefixes_found [] should not be empty', ()=>{
         
+        it('if prefixes are found the array prefixes_found [] should not be empty', ()=>{
+            
             if(!nothing_found){
                 
                 expect(prefixes_found).to.have.lengthOf.above(0);                 
@@ -98,43 +98,32 @@ describe('rooting-of-telephone-calls - Get_longest_prefix.js ', ()=>{
             if(nothing_found){
                 
                 expect(couples).to.be.null;                 
-            
+                
             } 
             
         });
-    
-        it('if prefixes are found the array couples [] should not be empty', ()=>{
         
+        it('if prefixes are found the array couples [] should not be empty', ()=>{
+            
             if(!nothing_found){
                 
-                expect(couples).to.have.lengthOf.above(0);                 
+                expect(couples).to.have.lengthOf.above(0);  
+                
             }    
         });
-        
+
+         
+               
         
     });
 });
 
-describe('rooting-of-telephone-calls - Cheapest_operator.js ', ()=>{
-    describe('function must return an object {} (rooting_to) ', ()=>{
-        
-        it("'rooting_to' object has must have 2 properties 'cheapest, 'operator_name'", ()=>{
-            
-            if(nothing_found){
-                
-                expect(couples).to.be.null;                 
+describe(' the Dialed_number must include the selected prefix ', ()=>{
 
-            }
-        });
-    
-        it('if prefixes are found the array couples [] should not be empty', ()=>{
-        
-            if(!nothing_found){
-                
-                expect(couples).to.have.lengthOf.above(0);                 
-            }    
-        });
-        
-        
-    });
+     it('the Dialed number must include the prefix :D :D :D', ()=>{
+         
+             expect(Dialed_number).to.include(couple.prefix);
+         
+     });
+
 });
