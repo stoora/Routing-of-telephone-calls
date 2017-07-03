@@ -11,7 +11,7 @@ var nothing_found = require('./main.js').nothing_found;
 var couple = require('./main.js').couple;
 var couples = require('./main.js').couples;
 
-describe('rooting-of-telephone-calls - main.js    Hi :D :D :D', function(){
+describe('rooting-of-telephone-calls - main.js    Hi :D :D :D I would like to call someone ! what would be the cheapest operator for me ?!', function(){
     
     describe('Telephone numbers should be inputted in the same format as in price lists', function(){
         
